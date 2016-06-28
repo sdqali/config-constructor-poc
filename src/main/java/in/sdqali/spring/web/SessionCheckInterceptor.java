@@ -12,8 +12,12 @@ public class SessionCheckInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        request.getHeader()
-        return false;
+        if(request.getHeader("session") == null) {
+            response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            return false;
+        } else {
+            return true;
+        }
     }
 
     @Override
