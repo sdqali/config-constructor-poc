@@ -1,6 +1,7 @@
 build/
 .gradle/
-.iml
-spring-resolvers.iml
-spring-resolvers.ipr
-spring-resolvers.iws
+*.iml
+*.ipr
+*.iws
+.idea/
+target/
